@@ -15,13 +15,20 @@ numeric.svd= function svd(A) {
     var j=0;
     var k=0;
     var l=0;
+	var fat = false;
 
     var u= numeric.clone(A);
     var m= u.length;
 
     var n= u[0].length;
 
-    if (m < n) throw "Need more rows than columns";
+    if (m < n) {
+		fat = true;
+		u = numeric.transpose(u);
+		var temp = n;
+		n = m;
+		m = temp;
+	}
 
     var e = new Array(n);
     var q = new Array(n);
@@ -290,7 +297,10 @@ numeric.svd= function svd(A) {
       }
      }
     }
-
-	return {U:u,S:q,V:v};
+	if (fat) {
+		return {U:v,S:q,V:u};
+	} else {
+		return {U:u,S:q,V:v};
+	}
 };
 
