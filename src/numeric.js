@@ -1,5 +1,5 @@
 
-numeric.version = "1.2.8-2";
+numeric.version = "1.2.8-3";
 
 // 1. Utility functions
 numeric.bench = function bench (f,interval) {
