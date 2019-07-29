@@ -1256,7 +1256,7 @@ numeric.T.prototype.cos = numeric.Tunop(
         'return x.exp().add(x.neg().exp()).div(2);');
 numeric.T.prototype.abs = numeric.Tunop(
         'return new numeric.T(numeric.abs(x.x));',
-        'return new numeric.T(numeric.sqrt(numeric.add(mul(x.x,x.x),mul(x.y,x.y))));',
+        'return new numeric.T(Math.sqrt(numeric.add(mul(x.x,x.x),mul(x.y,x.y))));',
         'var mul = numeric.mul;');
 numeric.T.prototype.log = numeric.Tunop(
         'return new numeric.T(numeric.log(x.x));',
