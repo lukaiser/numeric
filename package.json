@@ -1,6 +1,6 @@
 {
   "name": "numeric",
-  "version": "1.2.8-3",
+  "version": "1.2.8-4",
   "author": "Sébastien Loisel",
   "description": "Numerical analysis in Javascript http://www.numericjs.com/",
   "keywords": [
