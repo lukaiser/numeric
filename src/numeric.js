@@ -1026,7 +1026,7 @@ numeric._random = function _random(s,k) {
 
 numeric.random = function random(s) { return numeric._random(s,0); };
 
-numeric.norm2 = function norm2(x,a) { return numeric.sqrt(numeric.norm2Squared(x,a)); };
+numeric.norm2 = function norm2(x,a) { return Math.sqrt(numeric.norm2Squared(x,a)); };
 
 numeric.linspace = function linspace(a,b,n) {
     if(typeof n === "undefined") n = Math.max(Math.round(b-a)+1,1);
